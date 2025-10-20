@@ -25,11 +25,6 @@
             "name": "天涯资源",
             "detail": "https://tyyszy.com"
         },
-        "xiaomaomi": {
-            "api": "https://zy.xmm.hk/api.php/provide/vod",
-            "name": "小猫咪资源",
-            "detail": "https://zy.xmm.hk"
-        },
         "ffzy": {
             "api": "https://cj.ffzyapi.com/api.php/provide/vod",
             "name": "非凡资源",
@@ -53,7 +48,7 @@
         "wolongzy": {
             "api": "https://collect.wolongzy.cc/api.php/provide/vod",
             "name": "卧龙资源",
-            "detail": "https://wolongzyw.com"
+            "detail": "https://wolongzy.cc"
         },
         "jisu": {
             "api": "https://jszyapi.com/api.php/provide/vod",
@@ -89,11 +84,6 @@
             "api": "http://zuidazy.me/api.php/provide/vod",
             "name": "最大资源",
             "detail": "http://zuidazy.me"
-        },
-        "wwdj": {
-            "api": "https://ww.tyyszy5.com/api.php/provide/vod",
-            "name": "旺旺短剧",
-            "detail": "https://wwzy.tv"
         },
         "wwzy": {
             "api": "https://api.wwzy.tv/api.php/provide/vod",
@@ -159,7 +149,7 @@
         },
         "siwazy": {
             "api": "https://siwazyw.tv/api.php/provide/vod",
-            "name": "丝袜资源",
+            "name": "AV-丝袜资源",
             "detail": "https://siwazyw.tv"
         },
         "ckzy": {
@@ -246,6 +236,11 @@
             "api": "https://91md.me/api.php/provide/vod",
             "name": "AV-91麻豆",
             "detail": "https://91md.me"
+        },
+        "91av": {
+            "api": "https://91av.cyou/api.php/provide/vod",
+            "name": "AV-91av",
+            "detail": "https://91av.cyou"
         },
         "fczy": {
             "api": "https://api.fczy888.me/api.php/provide/vod",
