@@ -270,6 +270,12 @@
       "name": "AV-小鸡资源",
       "is_adult": true
     },
+    "siwazy": {
+      "api": "https://siwazyw.tv/api.php/provide/vod",
+      "name": "AV-丝袜资源",
+      "detail": "https://siwazyw.tv",
+      "is_adult": true
+    },
     "155api": {
       "api": "https://155api.com/api.php/provide/vod",
       "name": "AV-155资源",
@@ -286,6 +292,12 @@
       "api": "https://91md.me/api.php/provide/vod",
       "name": "AV-91麻豆",
       "detail": "https://91md.me",
+      "is_adult": true
+    },
+    "91av": {
+      "api": "https://91av.cyou/api.php/provide/vod",
+      "name": "AV-91av",
+      "detail": "https://91av.cyou",
       "is_adult": true
     },
     "lbapiby": {
