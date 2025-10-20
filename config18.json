@@ -147,6 +147,16 @@
             "name": "金鹰资源",
             "detail": "https://jyzyapi.com"
         },
+        "apilj_provide": {
+            "api": "https://apilj.com/api.php/provide/vod",
+            "name": "AV-辣椒资源",
+            "detail": "https://apilj.com"
+        },
+        "xiaojizy": {
+            "api": "https://api.xiaojizy.live/provide/vod",
+            "name": "AV-小鸡资源",
+            "detail": "https://api.xiaojizy.live"
+        },
         "siwazy": {
             "api": "https://siwazyw.tv/api.php/provide/vod",
             "name": "AV-丝袜资源",
