@@ -7,6 +7,12 @@
       "detail": "https://api.1080zyku.com",
       "is_adult": false
     },
+    "yzzyapi": {
+      "api": "https://api.yzzy-api.com/inc/api_mac10.php",
+      "name": "TV-优质资源",
+      "detail": "https://1080zyk.com",
+      "is_adult": false
+    },
     "360zy": {
       "api": "https://360zy.com/api.php/provide/vod",
       "name": "TV-360资源",
@@ -103,12 +109,12 @@
       "is_adult": false
     },
     "wwzy": {
-      "api": "https://wwzy.tv/api.php/provide/vod",
+      "api": "https://ww.tyyszy5.com/api.php/provide/vod",
       "name": "TV-旺旺短剧",
       "detail": "https://wwzy.tv",
       "is_adult": false
     },
-    "wwzy_api": {
+    "wwzyapi": {
       "api": "https://api.wwzy.tv/api.php/provide/vod",
       "name": "TV-旺旺资源",
       "detail": "https://api.wwzy.tv",
