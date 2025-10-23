@@ -104,6 +104,11 @@
             "name": "1080资源",
             "detail": "https://api.1080zyku.com"
         },
+        "yzzyapi": {
+            "api": "https://api.yzzy-api.com/inc/api_mac10.php",
+            "name": "优质资源",
+            "detail": "https://1080zyk.com"
+        },
         "hhzy": {
             "api": "https://hhzyapi.com/api.php/provide/vod",
             "name": "豪华资源",
@@ -146,6 +151,16 @@
             "api": "https://jyzyapi.com/provide/vod",
             "name": "金鹰资源",
             "detail": "https://jyzyapi.com"
+        },
+        "aqyzy": {
+            "api": "https://iqiyizyapi.com/api.php/provide/vod",
+            "name": "爱奇艺",
+            "detail": "https://iqiyizyapi.com"
+        },
+        "myzy": {
+            "api": "https://api.maoyanapi.top/api.php/provide/vod",
+            "name": "猫眼资源",
+            "detail": "https://www.maoyanzy.com"
         }
     },
     "lives": {
