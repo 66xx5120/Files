@@ -196,8 +196,8 @@
             "name": "fanmingming",
             "url": "https://raw.gh.registry.cyou/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u"
         },
-        "catvodtv": {
-            "name": "catvodtv",
+        "catvod": {
+            "name": "catvod",
             "url": "https://live.catvod.com/tv.m3u"
         },
         "iptvchao1": {
