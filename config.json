@@ -164,9 +164,105 @@
         }
     },
     "lives": {
-        "yang-1989": {
-            "name": "YanG",
-            "url": "https://tv-1.iill.top/m3u/Gather"
+        "myiptv": {
+            "name": "myiptv",
+            "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u"
+        },
+        "iptv713": {
+            "name": "iptv713",
+            "url": "https://raw.gh.registry.cyou/8080713/iptv-api/refs/heads/master/output/result.m3u"
+        },
+        "iptvhotel": {
+            "name": "iptvhotel",
+            "url": "https://raw.gh.registry.cyou/cymz6/AutoIPTV-Hotel/refs/heads/main/lives.m3u"
+        },
+        "YanG-1989Migu": {
+            "name": "YanG-1989Migu",
+            "url": "https://raw.gh.registry.cyou/YanG-1989/m3u/refs/heads/main/Migu.m3u"
+        },
+        "YanG-1989Gather": {
+            "name": "YanG-1989Gather",
+            "url": "https://raw.gh.registry.cyou/YanG-1989/m3u/refs/heads/main/Gather.m3u"
+        },
+        "iptvipv4weishi": {
+            "name": "iptvipv4weishi",
+            "url": "https://live.hacks.tools/tv/ipv4/categories/卫视频道.m3u"
+        },
+        "iptvipv4yangshi": {
+            "name": "iptvipv4yangshi",
+            "url": "https://live.hacks.tools/tv/ipv4/categories/央视频道.m3u"
+        },
+        "fanmingming": {
+            "name": "fanmingming",
+            "url": "https://raw.gh.registry.cyou/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u"
+        },
+        "catvod": {
+            "name": "catvodtv",
+            "url": "https://live.catvod.com/tv.m3u"
+        },
+        "iptvchao1": {
+            "name": "iptvchao1",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/index.m3u"
+        },
+        "iptvchao2": {
+            "name": "iptvchao2",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/All.m3u"
+        },
+        "iptvchao3foreign": {
+            "name": "iptvchao3foreign",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Foreign.m3u"
+        },
+        "iptvchao4food": {
+            "name": "iptvchao4food",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Food.m3u"
+        },
+        "iptvchao5music": {
+            "name": "iptvchao5music",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Music.m3u"
+        },
+        "iptvchao18": {
+            "name": "iptvchao18",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/18.m3u"
+        },
+        "yuechaniptv": {
+            "name": "yuechaniptv",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/IPTV.m3u"
+        },
+        "yuechanglobal": {
+            "name": "yuechanglobal",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Global.m3u"
+        },
+        "yuechanhunan": {
+            "name": "yuechanhunan",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Hunan.m3u"
+        },
+        "yuechangatv": {
+            "name": "yuechangatv",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/GATV.m3u"
+        },
+        "yuechanadult": {
+            "name": "yuechanadult",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Adult.m3u"
+        },
+        "huyayqk1": {
+            "name": "huyayqk1",
+            "url": "https://sub.ottiptv.cc/huyayqk.m3u"
+        },
+        "huyayqk2": {
+            "name": "huyayqk2",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/huyayqk.m3u"
+        },
+        "douyuyqk": {
+            "name": "douyuyqk",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/douyuyqk.m3u"
+        },
+        "yylunbo": {
+            "name": "yylunbo",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/yylunbo.m3u"
+        },
+        "bililive": {
+            "name": "bililive",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/bililive.m3u"
         },
         "Mursor": {
             "name": "Mursor",
