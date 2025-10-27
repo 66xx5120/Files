@@ -196,7 +196,7 @@
             "name": "fanmingming",
             "url": "https://raw.gh.registry.cyou/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u"
         },
-        "catvod": {
+        "catvodtv": {
             "name": "catvodtv",
             "url": "https://live.catvod.com/tv.m3u"
         },
@@ -208,15 +208,15 @@
             "name": "iptvchao2",
             "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/All.m3u"
         },
-        "iptvchao3foreign": {
+        "iptvchao3": {
             "name": "iptvchao3foreign",
             "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Foreign.m3u"
         },
-        "iptvchao4food": {
+        "iptvchao4": {
             "name": "iptvchao4food",
             "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Food.m3u"
         },
-        "iptvchao5music": {
+        "iptvchao5": {
             "name": "iptvchao5music",
             "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Music.m3u"
         },
