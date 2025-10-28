@@ -479,6 +479,26 @@
             "name": "bililive2",
             "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/bililive.m3u"
         },
+        "douyinKge": {
+            "name": "douyinKge",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/douyinKge.m3u"
+        },
+        "NPTV": {
+            "name": "NPTV",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/NPTV.m3u"
+        },
+        "maitv": {
+            "name": "maitv",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/maitv.m3u"
+        },
+        "isgreat": {
+            "name": "isgreat",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/isgreat.m3u"
+        },
+        "tvipv6": {
+            "name": "tvipv6",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvipv6.m3u"
+        },
         "Mursor": {
             "name": "Mursor",
             "url": "https://sub.ottiptv.cc/iptv.m3u",
