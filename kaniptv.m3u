@@ -1,0 +1,63 @@
+#EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml"
+#EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV02财经HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv2
+#EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV03综艺HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv3
+#EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV05体育HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv5
+#EXTINF:-1,tvg-id="cctv5+" tvg-name="cctv5+" tvg-logo="https://epg.v1.mk/logo/cctv5+.png" group-title="央视",CCTV5+体育赛事
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv5p
+#EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV06电影HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv6
+#EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV08电视剧HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv8
+#EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV09记录HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv9
+#EXTINF:-1,tvg-id="cctv12" tvg-name="cctv12" tvg-logo="https://epg.v1.mk/logo/cctv12.png" group-title="央视",CCTV12社会与法HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv12
+#EXTINF:-1,tvg-id="cctv13" tvg-name="cctv13" tvg-logo="https://epg.v1.mk/logo/cctv13.png" group-title="央视",CCTV13新闻
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv13
+#EXTINF:-1,tvg-id="cctv14" tvg-name="cctv14" tvg-logo="https://epg.v1.mk/logo/cctv14.png" group-title="央视",CCTV14少儿HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv14
+#EXTINF:-1,tvg-id="长影频道" tvg-name="长影频道" tvg-logo="https://epg.v1.mk/logo/长影频道.png" group-title="其他",长影频道
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=custom10
+#EXTINF:-1,tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://epg.v1.mk/logo/安徽卫视.png" group-title="安徽",安徽卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=ahws
+#EXTINF:-1,tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://epg.v1.mk/logo/北京卫视.png" group-title="北京",北京卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=bjws
+#EXTINF:-1,tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://epg.v1.mk/logo/重庆卫视.png" group-title="重庆",重庆卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cqws
+#EXTINF:-1,tvg-id="福建乡村公共频道" tvg-name="福建乡村公共频道" tvg-logo="https://epg.v1.mk/logo/福建乡村公共频道.png" group-title="福建",福建东南卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=dnws
+#EXTINF:-1,tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://epg.v1.mk/logo/广东卫视.png" group-title="广东",广东卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=gdws
+#EXTINF:-1,tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://epg.v1.mk/logo/贵州卫视.png" group-title="贵州",贵州卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=gzws
+#EXTINF:-1,tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://epg.v1.mk/logo/河北卫视.png" group-title="河北",河北卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=hebeiws
+#EXTINF:-1,tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://epg.v1.mk/logo/河南卫视.png" group-title="河南",河南卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=hnws
+#EXTINF:-1,tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://epg.v1.mk/logo/黑龙江卫视.png" group-title="黑龙江",黑龙江卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=hljws
+#EXTINF:-1,tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://epg.v1.mk/logo/湖南卫视.png" group-title="湖南",湖南卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=hunanws
+#EXTINF:-1,tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://epg.v1.mk/logo/吉林卫视.png" group-title="吉林",吉林卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=jlws
+#EXTINF:-1,tvg-id="江苏卫视" tvg-name="江苏卫视" tvg-logo="https://epg.v1.mk/logo/江苏卫视.png" group-title="江苏",江苏卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=jsws
+#EXTINF:-1,tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://epg.v1.mk/logo/江西卫视.png" group-title="江西",江西卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=jxws
+#EXTINF:-1,tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://epg.v1.mk/logo/辽宁卫视.png" group-title="辽宁",辽宁卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=lnws
+#EXTINF:-1,tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://epg.v1.mk/logo/山东卫视.png" group-title="山东",山东卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=sdws
+#EXTINF:-1,tvg-id="上海东方影视" tvg-name="上海东方影视" tvg-logo="https://epg.v1.mk/logo/上海东方影视.png" group-title="上海",上海东方卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=dfws
+#EXTINF:-1,tvg-id="深圳卫视" tvg-name="深圳卫视" tvg-logo="https://epg.v1.mk/logo/深圳卫视.png" group-title="卫视",深圳卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=szws
+#EXTINF:-1,tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://epg.v1.mk/logo/四川卫视.png" group-title="四川",四川卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=scws
+#EXTINF:-1,tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://epg.v1.mk/logo/天津卫视.png" group-title="卫视",天津卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=tjws
+#EXTINF:-1,tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://epg.v1.mk/logo/浙江卫视.png" group-title="浙江",浙江卫视HD
+http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=zjws
