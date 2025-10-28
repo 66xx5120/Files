@@ -166,11 +166,13 @@
     "lives": {
         "myiptv": {
             "name": "myiptv",
-            "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u"
+            "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "iptv713": {
             "name": "iptv713",
-            "url": "https://raw.gh.registry.cyou/8080713/iptv-api/refs/heads/master/output/result.m3u"
+            "url": "https://raw.gh.registry.cyou/8080713/iptv-api/refs/heads/master/output/result.m3u",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "iptvhotel": {
             "name": "iptvhotel",
@@ -190,27 +192,33 @@
         },
         "YanG-Gather": {
             "name": "YanG-Gather",
-            "url": "https://tv.iill.top/m3u/Gather"
+            "url": "https://tv.iill.top/m3u/Gather",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "bingcha": {
             "name": "bingcha",
-            "url": "https://188766.xyz/itv"
+            "url": "https://188766.xyz/itv",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "bingchami": {
             "name": "bingchami",
-            "url": "https://fy.188766.xyz/?ip=&mima=mianfeidehaishoufei"
+            "url": "https://fy.188766.xyz/?ip=&mima=mianfeidehaishoufei",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "Kimentanm": {
             "name": "Kimentanm",
-            "url": "https://raw.gh.registry.cyou/Kimentanm/aptv/master/m3u/iptv.m3u"
+            "url": "https://raw.gh.registry.cyou/Kimentanm/aptv/master/m3u/iptv.m3u",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "itvlist": {
             "name": "itvlist",
-            "url": "https://bit.ly/itvlist"
+            "url": "https://bit.ly/itvlist",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "suxuang": {
             "name": "suxuang",
-            "url": "https://bit.ly/suxuang-v4"
+            "url": "https://bit.ly/suxuang-v4",
+            "epg": "https://epg.112114.xyz/pp.xml"
         },
         "iptvipv4weishi": {
             "name": "iptvipv4weishi",
@@ -323,12 +331,7 @@
         "tvipv6": {
             "name": "tvipv6",
             "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvipv6.m3u"
-        },
-        "Mursor": {
-            "name": "Mursor",
-            "url": "https://sub.ottiptv.cc/iptv.m3u",
-            "ua": "okHttp/Mod-1.1.0"
-        }
+       }
     },
     "custom_category": [
         {
