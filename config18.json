@@ -339,9 +339,145 @@
         }
     },
     "lives": {
-        "yang-1989": {
-            "name": "YanG",
-            "url": "https://tv-1.iill.top/m3u/Gather"
+        "myiptv": {
+            "name": "myiptv",
+            "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u"
+        },
+        "iptv713": {
+            "name": "iptv713",
+            "url": "https://raw.gh.registry.cyou/8080713/iptv-api/refs/heads/master/output/result.m3u"
+        },
+        "iptvhotel": {
+            "name": "iptvhotel",
+            "url": "https://raw.gh.registry.cyou/cymz6/AutoIPTV-Hotel/refs/heads/main/lives.m3u"
+        },
+        "kaniptv": {
+            "name": "kaniptv",
+            "url": "http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014"
+        },
+        "YanG-1989Migu": {
+            "name": "YanG-1989Migu",
+            "url": "https://raw.gh.registry.cyou/YanG-1989/m3u/refs/heads/main/Migu.m3u"
+        },
+        "YanG-1989Gather": {
+            "name": "YanG-1989Gather",
+            "url": "https://raw.gh.registry.cyou/YanG-1989/m3u/refs/heads/main/Gather.m3u"
+        },
+        "YanG-Gather": {
+            "name": "YanG-Gather",
+            "url": "https://tv.iill.top/m3u/Gather"
+        },
+        "bingcha": {
+            "name": "bingcha",
+            "url": "https://188766.xyz/itv"
+        },
+        "bingchami": {
+            "name": "bingchami",
+            "url": "https://fy.188766.xyz/?ip=&mima=mianfeidehaishoufei"
+        },
+        "Kimentanm": {
+            "name": "Kimentanm",
+            "url": "https://raw.gh.registry.cyou/Kimentanm/aptv/master/m3u/iptv.m3u"
+        },
+        "itvlist": {
+            "name": "itvlist",
+            "url": "https://bit.ly/itvlist"
+        },
+        "suxuang": {
+            "name": "suxuang",
+            "url": "https://bit.ly/suxuang-v4"
+        },
+        "iptvipv4weishi": {
+            "name": "iptvipv4weishi",
+            "url": "https://live.hacks.tools/tv/ipv4/categories/卫视频道.m3u"
+        },
+        "iptvipv4yangshi": {
+            "name": "iptvipv4yangshi",
+            "url": "https://live.hacks.tools/tv/ipv4/categories/央视频道.m3u"
+        },
+        "fanmingming": {
+            "name": "fanmingming",
+            "url": "https://raw.gh.registry.cyou/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u"
+        },
+        "catvod": {
+            "name": "catvod",
+            "url": "https://live.catvod.com/tv.m3u"
+        },
+        "iptvchao1": {
+            "name": "iptvchao1",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/index.m3u"
+        },
+        "iptvchao2": {
+            "name": "iptvchao2",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/All.m3u"
+        },
+        "iptvchao3": {
+            "name": "iptvchao3foreign",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Foreign.m3u"
+        },
+        "iptvchao4": {
+            "name": "iptvchao4food",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Food.m3u"
+        },
+        "iptvchao5": {
+            "name": "iptvchao5music",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/Music.m3u"
+        },
+        "iptvchao18": {
+            "name": "iptvchao18",
+            "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/18.m3u"
+        },
+        "yuechaniptv": {
+            "name": "yuechaniptv",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/IPTV.m3u"
+        },
+        "yuechanglobal": {
+            "name": "yuechanglobal",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Global.m3u"
+        },
+        "yuechanhunan": {
+            "name": "yuechanhunan",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Hunan.m3u"
+        },
+        "yuechangatv": {
+            "name": "yuechangatv",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/GATV.m3u"
+        },
+        "yuechanadult": {
+            "name": "yuechanadult",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Adult.m3u"
+        },
+        "huyayqk1": {
+            "name": "huyayqk1",
+            "url": "https://sub.ottiptv.cc/huyayqk.m3u"
+        },
+        "huyayqk2": {
+            "name": "huyayqk2",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/huyayqk.m3u"
+        },
+        "douyuyqk1": {
+            "name": "douyuyqk1",
+            "url": "https://sub.ottiptv.cc/douyuyqk.m3u"
+        },
+        "douyuyqk2": {
+            "name": "douyuyqk2",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/douyuyqk.m3u"
+        },
+        "yylunbo1": {
+            "name": "yylunbo1",
+            "url": "https://sub.ottiptv.cc/yylunbo.m3u"
+        },
+        "yylunbo2": {
+            "name": "yylunbo2",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/yylunbo.m3u"
+        },
+        "bililive1": {
+            "name": "bililive1",
+            "url": "https://sub.ottiptv.cc/bililive.m3u"
+        },
+        "bililive2": {
+            "name": "bililive2",
+            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/bililive.m3u"
         },
         "Mursor": {
             "name": "Mursor",
