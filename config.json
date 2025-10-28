@@ -176,6 +176,10 @@
             "name": "iptvhotel",
             "url": "https://raw.gh.registry.cyou/cymz6/AutoIPTV-Hotel/refs/heads/main/lives.m3u"
         },
+        "kaniptv": {
+            "name": "kaniptv",
+            "url": "http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014"
+        },
         "YanG-1989Migu": {
             "name": "YanG-1989Migu",
             "url": "https://raw.gh.registry.cyou/YanG-1989/m3u/refs/heads/main/Migu.m3u"
@@ -183,6 +187,30 @@
         "YanG-1989Gather": {
             "name": "YanG-1989Gather",
             "url": "https://raw.gh.registry.cyou/YanG-1989/m3u/refs/heads/main/Gather.m3u"
+        },
+        "YanG-Gather": {
+            "name": "YanG-Gather",
+            "url": "https://tv.iill.top/m3u/Gather"
+        },
+        "bingcha": {
+            "name": "bingcha",
+            "url": "https://188766.xyz/itv"
+        },
+        "bingchami": {
+            "name": "bingchami",
+            "url": "https://fy.188766.xyz/?ip=&mima=mianfeidehaishoufei"
+        },
+        "Kimentanm": {
+            "name": "Kimentanm",
+            "url": "https://raw.gh.registry.cyou/Kimentanm/aptv/master/m3u/iptv.m3u"
+        },
+        "itvlist": {
+            "name": "itvlist",
+            "url": "https://bit.ly/itvlist"
+        },
+        "suxuang": {
+            "name": "suxuang",
+            "url": "https://bit.ly/suxuang-v4"
         },
         "iptvipv4weishi": {
             "name": "iptvipv4weishi",
@@ -252,16 +280,28 @@
             "name": "huyayqk2",
             "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/huyayqk.m3u"
         },
-        "douyuyqk": {
-            "name": "douyuyqk",
+        "douyuyqk1": {
+            "name": "douyuyqk1",
+            "url": "https://sub.ottiptv.cc/douyuyqk.m3u"
+        },
+        "douyuyqk2": {
+            "name": "douyuyqk2",
             "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/douyuyqk.m3u"
         },
-        "yylunbo": {
-            "name": "yylunbo",
+        "yylunbo1": {
+            "name": "yylunbo1",
+            "url": "https://sub.ottiptv.cc/yylunbo.m3u"
+        },
+        "yylunbo2": {
+            "name": "yylunbo2",
             "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/yylunbo.m3u"
         },
-        "bililive": {
-            "name": "bililive",
+        "bililive1": {
+            "name": "bililive1",
+            "url": "https://sub.ottiptv.cc/bililive.m3u"
+        },
+        "bililive2": {
+            "name": "bililive2",
             "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/bililive.m3u"
         },
         "Mursor": {
