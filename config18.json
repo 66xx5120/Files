@@ -332,6 +332,11 @@
             "api": "https://www.gdlsp.com/api/json.php",
             "detail": "https://www.gdlsp.com"
         },
+        "api_71": {
+            "name": "AV-91精品资源",
+            "api": "https://91jpzyw.com/api.php/provide/vod",
+            "detail": "https://91jpzyw.com"
+        },
         "api_72": {
             "name": "AV-黄AV资源",
             "api": "https://www.pgxdy.com/api/json.php",
