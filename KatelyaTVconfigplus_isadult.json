@@ -448,6 +448,12 @@
       "name": "AV-黄色资源啊啊",
       "is_adult": true
     },
+    "jpzyw91": {
+       "api": "https://91jpzyw.com/api.php/provide/vod",
+       "name": "AV-91精品资源",
+       "detail": "https://91jpzyw.com",
+       "is_adult": true
+    },
     "xxibaozyw": {
       "api": "https://www.xxibaozyw.com/api.php/provide/vod",
       "name": "AV-细胞采集黄色",
