@@ -332,9 +332,9 @@
             "name": "douyinKge",
             "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/douyinKge.m3u"
         },
-        "NPTV": {
-            "name": "NPTV",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/NPTV.m3u"
+        "IPTV-APIGitee": {
+            "name": "IPTV-APIGitee",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/IPTV-APIGitee.m3u"
         },
         "maitv": {
             "name": "maitv",
@@ -347,6 +347,10 @@
         "tvipv6": {
             "name": "tvipv6",
             "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvipv6.m3u"
+        },
+        "tvgitee": {
+            "name": "tvgitee",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvgitee.m3u"
        }
     },
     "custom_category": [
