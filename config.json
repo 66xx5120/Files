@@ -173,7 +173,7 @@
         "myiptv": {
             "name": "myiptv",
             "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u",
-            "epg": "https://epg.112114.xyz/pp.xml"
+            "epg": "https://raw.gh.registry.cyou/fanmingming/live/refs/heads/main/e.xml"
         },
         "iptv713": {
             "name": "iptv713",
@@ -206,10 +206,20 @@
             "url": "https://188766.xyz/itv",
             "epg": "https://epg.112114.xyz/pp.xml"
         },
+        "bingchamiallinone": {
+            "name": "bingchamiallinone",
+            "url": "https://fy.188766.xyz/?url=http://cdn.jdshipin.com:8880&mishitong=true&mima=bingchawusifengxian&huikan=1",
+            "epg": "https://epg.112114.xyz/pp.xml"
+        },
         "bingchami": {
             "name": "bingchami",
             "url": "https://fy.188766.xyz/?ip=&mima=bingchawusifengxian",
             "epg": "https://epg.112114.xyz/pp.xml"
+        },
+        "jackTV": {
+            "name": "jackTV",
+            "url": "https://php.946985.filegear-sg.me/jackTV.m3u",
+            "epg": "https://raw.gh.registry.cyou/fanmingming/live/refs/heads/main/e.xml"
         },
         "Kimentanm": {
             "name": "Kimentanm",
