@@ -236,6 +236,11 @@
             "url": "https://bit.ly/suxuang-v4",
             "epg": "https://epg.112114.xyz/pp.xml"
         },
+        "smart-cn": {
+            "name": "smart-cn",
+            "url": "https://tmxk.pp.ua/smart-cn.m3u",
+            "epg": "https://epg.112114.xyz/pp.xml"
+        },
         "iptvipv4weishi": {
             "name": "iptvipv4weishi",
             "url": "https://live.hacks.tools/tv/ipv4/categories/卫视频道.m3u"
