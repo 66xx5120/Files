@@ -1,4 +1,14 @@
 #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml"
+#EXTINF:-1,tvg-id="TNT" tvg-name="TNT" tvg-logo="https://epg.v1.mk/logo/TNT.png" group-title="其他",TNT SPORTS 1
+http://156.238.248.80:8083/play?id=TNT-Sports-1
+#EXTINF:-1,tvg-id="TNT" tvg-name="TNT" tvg-logo="https://epg.v1.mk/logo/TNT.png" group-title="其他",TNT SPORTS 1 [備線1]
+http://156.238.248.80:8083/play?id=TNT-Sports-1-BU
+#EXTINF:-1,tvg-id="TNT" tvg-name="TNT" tvg-logo="https://epg.v1.mk/logo/TNT.png" group-title="其他",TNT SPORTS 1 [備線2]
+http://156.238.248.80:8083/play?id=TNT-Sports-1
+#EXTINF:-1,tvg-id="TNT" tvg-name="TNT" tvg-logo="https://epg.v1.mk/logo/TNT.png" group-title="其他",TNT SPORTS 2
+http://156.238.248.80:8083/play?id=TNT-Sports-2
+#EXTINF:-1,tvg-id="MONEYFM" tvg-name="MONEYFM" tvg-logo="https://epg.v1.mk/logo/MONEYFM.png" group-title="其他",mono
+http://ppv.vhr.dpdns.org:8080/ppv/ufc/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV02财经HD
 http://www.kaniptv.cn/mk.php?ip=122.136.124.228:8014&id=cctv2
 #EXTINF:-1,tvg-id="CCTV-10" tvg-name="CCTV-10" tvg-logo="https://epg.v1.mk/logo/CCTV-10.png" group-title="央视",CCTV03综艺HD
