@@ -257,10 +257,6 @@
             "name": "catvod",
             "url": "https://live.catvod.com/tv.m3u"
         },
-        "smart-cn": {
-            "name": "smart-cn",
-            "url": "https://tmxk.pp.ua/smart-cn.m3u"
-        },
         "iptvchao1": {
             "name": "iptvchao1",
             "url": "https://cdn.jsdelivr.net/gh/chao921125/source@6.4.1/iptv/index.m3u"
