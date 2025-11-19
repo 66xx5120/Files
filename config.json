@@ -260,7 +260,8 @@
         },
         "catvod": {
             "name": "catvod",
-            "url": "https://live.catvod.com/tv.m3u"
+            "url": "https://live.catvod.com/tv.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
         },
         "iptvchao1": {
             "name": "iptvchao1",
@@ -344,23 +345,28 @@
         },
         "IPTV-APIGitee": {
             "name": "IPTV-APIGitee",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/IPTV-APIGitee.m3u"
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/IPTV-APIGitee.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
         },
         "maitv": {
             "name": "maitv",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/maitv.m3u"
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/maitv.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
         },
         "isgreat": {
             "name": "isgreat",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/isgreat.m3u"
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/isgreat.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
         },
         "tvipv6": {
             "name": "tvipv6",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvipv6.m3u"
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvipv6.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
         },
         "tvgitee": {
             "name": "tvgitee",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvgitee.m3u"
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvgitee.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
        }
     },
     "custom_category": [
