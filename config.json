@@ -343,6 +343,16 @@
             "name": "douyinKge",
             "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/douyinKge.m3u"
         },
+        "4gtv": {
+            "name": "4gtv",
+            "url": "https://raw.gh.registry.cyou/judy-gotv/iptv/refs/heads/main/4gtv.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
+        },
+        "migu": {
+            "name": "migu",
+            "url": "https://raw.gh.registry.cyou/mytv-android/myMIGU/refs/heads/main/migu.m3u",
+            "epg": "https://raw.gh.registry.cyou/mytv-android/myMIGU/refs/heads/main/epg.xml"
+        },
         "IPTV-APIGitee": {
             "name": "IPTV-APIGitee",
             "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/IPTV-APIGitee.m3u",
