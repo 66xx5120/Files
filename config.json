@@ -157,6 +157,11 @@
             "name": "爱奇艺",
             "detail": "https://iqiyizyapi.com"
         },
+        "taopianapi": {
+            "api": "https://taopianapi.com/cjapi/mc10/vod/json.html",
+            "name": "淘片",
+            "detail": "https://www.taopianzy.com/index.html"
+        },
         "myzy": {
             "api": "https://api.maoyanapi.top/api.php/provide/vod",
             "name": "猫眼资源",
