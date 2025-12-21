@@ -322,6 +322,10 @@
             "name": "yuechanadult",
             "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Adult.m3u"
         },
+        "zeeeuadult": {
+            "name": "zeeeuadult",
+            "url": "https://raw.githubusercontent.com/zeee-u/lzh06/main/fl.m3u"
+        },
         "huyayqk1": {
             "name": "huyayqk1",
             "url": "https://sub.ottiptv.cc/huyayqk.m3u"
