@@ -370,6 +370,11 @@
             "url": "https://raw.gh.registry.cyou/develop202/migu_video/refs/heads/main/interface.txt",
             "epg": "https://raw.gh.registry.cyou/develop202/migu_video/refs/heads/main/playback.xml"
         },
+        "iptvorg": {
+            "name": "iptvorg",
+            "url": "https://raw.gh.registry.cyou/iptv-org/iptv/master/streams/cn.m3u",
+            "epg": "https://fy.im5k.fun/fy.xml"
+        },
         "iptvhotel": {
             "name": "iptvhotel",
             "url": "https://raw.gh.registry.cyou/cymz6/AutoIPTV-Hotel/refs/heads/main/lives.m3u"
