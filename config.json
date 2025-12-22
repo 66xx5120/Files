@@ -195,6 +195,11 @@
             "url": "https://raw.gh.registry.cyou/iptv-org/iptv/master/streams/cn.m3u",
             "epg": "https://fy.im5k.fun/fy.xml"
         },
+        "smart": {
+            "name": "smart",
+            "url": "https://zsj.leokim.top/smart.m3u?token=c6GM8nf8BDjNA5wYXZen",
+            "epg": "https://fy.im5k.fun/fy.xml"
+        },
         "iptvhotel": {
             "name": "iptvhotel",
             "url": "https://raw.gh.registry.cyou/cymz6/AutoIPTV-Hotel/refs/heads/main/lives.m3u"
@@ -256,9 +261,9 @@
             "url": "https://bit.ly/suxuang-v4",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
-        "smart-cn": {
-            "name": "smart-cn",
-            "url": "https://tmxk.pp.ua/smart-cn.m3u",
+        "yihad168": {
+            "name": "yihad168",
+            "url": "https://raw.gh.registry.cyou/yihad168/tv/refs/heads/main/tv.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
         "iptvipv4weishi": {
@@ -325,6 +330,10 @@
         "zeeeuadult": {
             "name": "zeeeuadult",
             "url": "https://raw.githubusercontent.com/zeee-u/lzh06/main/fl.m3u"
+        },
+        "xcadult": {
+            "name": "xcadult",
+            "url": "https://xc.adultiptv.net/get.php?username=1m3o9kPC&password=RXGNeZTttk&type=m3u_plus"
         },
         "huyayqk1": {
             "name": "huyayqk1",
