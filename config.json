@@ -200,6 +200,11 @@
             "url": "https://tv.iill.top/m3u/Gather",
             "epg": "https://epg.112114.xyz/pp.xml"
         },
+        "mycn": {
+            "name": "mycn",
+            "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/mycn.m3u",
+            "epg": "https://static.188766.xyz/e.xml"
+        },
         "bingcha": {
             "name": "bingcha",
             "url": "https://188766.xyz/itv",
@@ -207,17 +212,17 @@
         },
         "bingchamiallinone": {
             "name": "bingchamiallinone",
-            "url": "https://bc.188766.xyz/?url=http://cdn.jdshipin.com:8880&mishitong=true&mima=mianfeibuhuaqian&huikan=1",
+            "url": "https://bc.188766.xyz/?url=http://cdn.jdshipin.com:8880&mishitong=true&mima=bingcha1130&huikan=1",
             "epg": "https://static.188766.xyz/e.xml"
         },
         "bingchami": {
             "name": "bingchami",
-            "url": "https://bc.188766.xyz/?ip=&mima=mianfeibuhuaqian",
+            "url": "https://bc.188766.xyz/?ip=&mima=bingcha1130",
             "epg": "https://static.188766.xyz/e.xml"
         },
         "bingchamihui": {
             "name": "bingchamihui",
-            "url": "https://bc.188766.xyz/?ip=&mishitong=true&mima=mianfeibuhuaqian&huikan=1",
+            "url": "https://bc.188766.xyz/?ip=&mishitong=true&mima=bingcha1130&huikan=1",
             "epg": "https://static.188766.xyz/e.xml"
         },
         "itvlist": {
@@ -262,7 +267,11 @@
         "xcadult": {
             "name": "xcadult",
             "url": "https://xc.adultiptv.net/get.php?username=1m3o9kPC&password=RXGNeZTttk&type=m3u_plus"
-        },        
+        },
+        "my18": {
+            "name": "my18",
+            "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/18.m3u"
+        },
         "yylunbo1": {
             "name": "yylunbo1",
             "url": "https://sub.ottiptv.cc/yylunbo.m3u"
