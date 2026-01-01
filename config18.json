@@ -380,6 +380,11 @@
             "url": "https://tv.iill.top/m3u/Gather",
             "epg": "https://epg.112114.xyz/pp.xml"
         },
+        "zuboall": {
+            "name": "zuboall",
+            "url": "https://raw.gh.registry.cyou/q1017673817/iptvz/refs/heads/main/zubo_all.m3u",
+            "epg": "http://diyp3.112114.xyz/?ch={name}&date={date}"
+        },
         "mycn": {
             "name": "mycn",
             "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/mycn.m3u",
@@ -468,6 +473,10 @@
             "name": "Nowsports",
             "url": "https://raw.gh.registry.cyou/judy-gotv/iptv/refs/heads/main/Nowsports.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
+        },
+        "yifa18": {
+            "name": "yifa18",
+            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/yifa18.m3u"
         },
         "maitv": {
             "name": "maitv",
