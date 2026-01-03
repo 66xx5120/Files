@@ -351,9 +351,9 @@
     "lives": {
         "MursorIPTV": {
             "name": "MursorIPTV",
-            "url": "https://live.ottiptv.cc/iptv.m3u?userid=6330959294&sign=611f0ed32d15e3e54568fa35c8138f2b8f3fccb3d2d1bd2f675530331c66f7986d2468758adbcd573ed0ec9477d22b795be06e89f14299c3bd4b8e430c3f82e089cbbfc0d12f51&auth_token=d0ee3add5c5f3a9e79513a2e4e729712",
+            "url": "https://live.ottiptv.cc/iptv.m3u?userid=6330959294&sign=7ba20da479900859e4dd7fa6223e877e9980cf31feb91ab93fe60a3cc06171eef6748f55a2c921fba1733301e58d9101879a2ec9f95029fd5bc1220aa4a5021a23636e9ffbf6f1&auth_token=d0ee3add5c5f3a9e79513a2e4e729712",
             "epg": "https://epg.zsdc.eu.org/t.xml",
-            "ua": "okHttp/Mod-1.4.0.0"
+            "ua": "okHttp/Mod-1.5.0.0"
         },
         "myiptv": {
             "name": "myiptv",
