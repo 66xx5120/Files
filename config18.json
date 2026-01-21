@@ -162,6 +162,11 @@
             "name": "淘片",
             "detail": "https://www.taopianzy.com/index.html"
         },
+        "lovedan": {
+            "api": "https://lovedan.net/api.php/provide/vod",
+            "name": "艾旦影视",
+            "detail": "https://lovedan.net"
+        },
         "myzy": {
             "api": "https://api.maoyanapi.top/api.php/provide/vod",
             "name": "猫眼资源",
