@@ -240,11 +240,6 @@
             "url": "https://raw.gh.registry.cyou/mzky/checklist/refs/heads/master/itvlist.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
-        "yihad168": {
-            "name": "yihad168",
-            "url": "https://raw.gh.registry.cyou/yihad168/tv/refs/heads/main/tv.m3u",
-            "epg": "https://live.fanmingming.cn/e.xml"
-        },
         "catvod": {
             "name": "catvod",
             "url": "https://live.catvod.com/tv.m3u",
@@ -265,7 +260,7 @@
         "yuechanglobal": {
             "name": "yuechanglobal",
             "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Global.m3u"
-        },        
+        },
         "yuechanadult": {
             "name": "yuechanadult",
             "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Adult.m3u"
@@ -281,6 +276,16 @@
         "my18": {
             "name": "my18",
             "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/18.m3u"
+        },
+        "yihad168": {
+            "name": "yihad168",
+            "url": "https://raw.gh.registry.cyou/yihad168/tv/refs/heads/main/tv.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
+        },
+        "yihad168live": {
+            "name": "yihad168live",
+            "url": "https://raw.gh.registry.cyou/yihad168/tv/refs/heads/main/live.m3u",
+            "epg": "https://live.fanmingming.cn/e.xml"
         },
         "yylunbo1": {
             "name": "yylunbo1",
