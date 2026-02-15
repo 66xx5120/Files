@@ -360,6 +360,16 @@
             "epg": "https://epg.zsdc.eu.org/t.xml",
             "ua": "okHttp/Mod-1.5.0.0"
         },
+        "myiptvcatvod": {
+            "name": "myiptvcatvod",
+            "url": "https://iptv.catvod.com/list.php?token=d3adca2a4e02c52429d412099e2177f77085178bfdd84b57158a09f212dc60af",
+            "epg": "https://raw.gh.registry.cyou/sparkssssssssss/epg/main/pp.xml"
+        },
+        "stream-link": {
+            "name": "stream-link",
+            "url": "https://www.stream-link.org/playlist.m3u?token=c2e6c1ce-f27c-4fd2-948e-c29a2f97beb5",
+            "epg": "https://content.stream-link.org/epg/c2e6c1ce-f27c-4fd2-948e-c29a2f97beb5/guide.xml"
+        },
         "myiptv": {
             "name": "myiptv",
             "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u",
