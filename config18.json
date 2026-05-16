@@ -380,6 +380,11 @@
             "url": "https://raw.gh.registry.cyou/8080713/iptv-api/refs/heads/master/output/result.m3u",
             "epg": "https://epg.myxcwh.com/bingcha1130t.xml"
         },
+        "GNTV": {
+            "name": "GNTV",
+            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/GNTV.m3u",
+            "epg": "https://epg.myxcwh.com/t.xml"
+        },
         "iptvorg": {
             "name": "iptvorg",
             "url": "https://raw.gh.registry.cyou/iptv-org/iptv/master/streams/cn.m3u",
