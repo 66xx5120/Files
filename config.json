@@ -183,7 +183,7 @@
         "myiptvcatvod": {
             "name": "myiptvcatvod",
             "url": "https://iptv.catvod.com/list.php?token=d3adca2a4e02c52429d412099e2177f77085178bfdd84b57158a09f212dc60af",
-            "epg": "https://raw.gh.registry.cyou/sparkssssssssss/epg/main/pp.xml"
+            "epg": "https://github.cmliussss.net/https://raw.githubusercontent.com/sparkssssssssss/epg/main/pp.xml"
         },
         "stream-link": {
             "name": "stream-link",
@@ -192,22 +192,22 @@
         },
         "myiptv": {
             "name": "myiptv",
-            "url": "https://raw.gh.registry.cyou/66xx5120/iptv-api/refs/heads/master/output/result.m3u",
-            "epg": "https://raw.gh.registry.cyou/sparkssssssssss/epg/main/pp.xml"
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/iptv-api/refs/heads/master/output/result.m3u",
+            "epg": "https://github.cmliussss.net/https://raw.githubusercontent.com/sparkssssssssss/epg/main/pp.xml"
         },
         "iptv713": {
             "name": "iptv713",
-            "url": "https://raw.gh.registry.cyou/8080713/iptv-api/refs/heads/master/output/result.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/8080713/iptv-api/refs/heads/master/output/result.m3u",
             "epg": "https://epg.myxcwh.com/t.xml"
         },
         "GNTV": {
             "name": "GNTV",
-            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/GNTV.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/GNTV.m3u",
             "epg": "https://epg.myxcwh.com/t.xml"
         },
         "iptvorg": {
             "name": "iptvorg",
-            "url": "https://raw.gh.registry.cyou/iptv-org/iptv/master/streams/cn.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
             "epg": "https://fy.im5k.fun/fy.xml"
         },
         "smart": {
@@ -222,12 +222,17 @@
         },
         "zuboall": {
             "name": "zuboall",
-            "url": "https://raw.gh.registry.cyou/q1017673817/iptvz/refs/heads/main/zubo_all.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/q1017673817/iptvz/refs/heads/main/zubo_all.m3u",
             "epg": "http://diyp3.112114.xyz/?ch={name}&date={date}"
         },
         "mycn": {
             "name": "mycn",
-            "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/mycn.m3u",
+            "url": "https://github.cmliussss.net/https://gist.githubusercontent.com/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/mycn.m3u",
+            "epg": "https://static.188766.xyz/e.xml"
+        },
+        "TW211": {
+            "name": "TW211",
+            "url": "https://github.cmliussss.net/https://gist.githubusercontent.com/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/TW211.m3u",
             "epg": "https://static.188766.xyz/e.xml"
         },
         "bingcha": {
@@ -242,7 +247,7 @@
         },
         "itvlist": {
             "name": "itvlist",
-            "url": "https://raw.gh.registry.cyou/mzky/checklist/refs/heads/master/itvlist.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/mzky/checklist/refs/heads/master/itvlist.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
         "catvod": {
@@ -264,11 +269,11 @@
         },
         "yuechanglobal": {
             "name": "yuechanglobal",
-            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Global.m3u"
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/Global.m3u"
         },
         "yuechanadult": {
             "name": "yuechanadult",
-            "url": "https://raw.gh.registry.cyou/YueChan/Live/refs/heads/main/Adult.m3u"
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/Adult.m3u"
         },
         "zeeeuadult": {
             "name": "zeeeuadult",
@@ -280,16 +285,16 @@
         },
         "my18": {
             "name": "my18",
-            "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/18.m3u"
+            "url": "https://github.cmliussss.net/https://gist.githubusercontent.com/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/18.m3u"
         },
         "yihad168": {
             "name": "yihad168",
-            "url": "https://raw.gh.registry.cyou/yihad168/tv/refs/heads/main/tv.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/yihad168/tv/refs/heads/main/tv.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
         "yihad168live": {
             "name": "yihad168live",
-            "url": "https://raw.gh.registry.cyou/yihad168/tv/refs/heads/main/live.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/yihad168/tv/refs/heads/main/live.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
         "yylunbo1": {
@@ -298,29 +303,33 @@
         },
         "yylunbo2": {
             "name": "yylunbo2",
-            "url": "https://raw.gh.registry.cyou/mursor1985/LIVE/refs/heads/main/yylunbo.m3u"
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/yylunbo.m3u"
         },      
         "douyinKge": {
             "name": "douyinKge",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/douyinKge.m3u"
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/Files/refs/heads/main/douyinKge.m3u"
         },
         "Nowsports": {
             "name": "Nowsports",
-            "url": "https://raw.gh.registry.cyou/judy-gotv/iptv/refs/heads/main/Nowsports.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/judy-gotv/iptv/refs/heads/main/Nowsports.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
         "yifa18": {
             "name": "yifa18",
-            "url": "https://gist.gh.registry.cyou/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/yifa18.m3u"
+            "url": "https://github.cmliussss.net/https://gist.githubusercontent.com/66xx5120/4e99417b6684c8db79ef8b234f71960f/raw/yifa18.m3u"
+        },
+        "XXX": {
+            "name": "XXX",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/Files/refs/heads/main/xxx.m3u"
         },
         "maitv": {
             "name": "maitv",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/maitv.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/Files/refs/heads/main/maitv.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
         },
         "tvgitee": {
             "name": "tvgitee",
-            "url": "https://raw.gh.registry.cyou/66xx5120/Files/refs/heads/main/tvgitee.m3u",
+            "url": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/Files/refs/heads/main/tvgitee.m3u",
             "epg": "https://live.fanmingming.cn/e.xml"
        }
     },
