@@ -1,0 +1,15 @@
+{
+  "sites": [
+    {
+      "key": "js_honghuangguo",
+      "name": "红黄果剧",
+      "type": 3,
+      "api": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/Files/main/js/libs/drpy2.min.js",
+      "ext": "https://github.cmliussss.net/https://raw.githubusercontent.com/66xx5120/Files/main/js/honghuangguo.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "hide": 0
+    }
+  ]
+}
