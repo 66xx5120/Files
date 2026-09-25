@@ -1,0 +1,1051 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000000" />
+    <title>随机视频 / 图片</title>
+    <style>
+        /* ---------- 全局重置 ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background: #000;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            color: #fff;
+            user-select: none;
+        }
+
+        /* ---------- 顶部模式切换栏 ---------- */
+        #mode-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            padding: 12px 0 10px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        #mode-bar .mode-item {
+            padding: 4px 16px;
+            border-radius: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: transparent;
+        }
+        #mode-bar .mode-item.active {
+            color: #fff;
+            background: rgba(254, 44, 85, 0.25);
+            box-shadow: 0 0 12px rgba(254, 44, 85, 0.15);
+        }
+        #mode-bar .mode-item:active {
+            transform: scale(0.94);
+        }
+
+        /* ---------- 图片模式控制条 ---------- */
+        #image-control {
+            position: fixed;
+            top: 52px;
+            left: 0;
+            right: 0;
+            z-index: 19;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+        #image-control .ctrl-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #image-control .ctrl-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+        }
+        #image-control .toggle-btn {
+            padding: 4px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-width: 52px;
+            text-align: center;
+        }
+        #image-control .toggle-btn.active {
+            background: #fe2c55;
+            border-color: #fe2c55;
+        }
+        #image-control .toggle-btn:active {
+            transform: scale(0.94);
+        }
+        #image-control .delay-input {
+            width: 52px;
+            padding: 4px 0 4px 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            outline: none;
+        }
+        #image-control .delay-input:focus {
+            border-color: #fe2c55;
+        }
+        #image-control .delay-unit {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+        }
+        #image-control .status-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* ---------- 视频列表容器 ---------- */
+        #feed {
+            position: fixed;
+            inset: 0;
+            top: 52px;
+            height: calc(100dvh - 52px);
+            width: 100vw;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        #feed.mode-image {
+            top: 92px;
+            height: calc(100dvh - 92px);
+        }
+        #feed::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            position: relative;
+            height: calc(100dvh - 52px);
+            width: 100vw;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            background: #000;
+            overflow: hidden;
+        }
+        #feed.mode-image .slide {
+            height: calc(100dvh - 92px);
+        }
+
+        video.video-el,
+        img.image-el {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+        }
+        img.image-el {
+            object-fit: cover;
+        }
+
+        /* 渐变遮罩 */
+        .slide::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 38%;
+            background: linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0));
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* ---------- 加载 / 错误态 ---------- */
+        .status {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            z-index: 3;
+            color: rgba(255, 255, 255, .85);
+            font-size: 14px;
+        }
+        .spinner {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, .2);
+            border-top-color: #fe2c55;
+            animation: spin .8s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ---------- 右侧操作栏 ---------- */
+        .actions {
+            position: absolute;
+            right: 10px;
+            bottom: 96px;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .act {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .act .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, .25);
+            backdrop-filter: blur(4px);
+            transition: transform .15s, background .2s;
+        }
+        .act:active .icon {
+            transform: scale(.88);
+        }
+        .act svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
+        .act.liked svg {
+            fill: #fe2c55;
+        }
+        .act .label {
+            font-size: 12px;
+            color: #fff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+        }
+
+        /* ---------- 底部信息栏 ---------- */
+        .info {
+            position: absolute;
+            left: 14px;
+            right: 78px;
+            bottom: 76px;
+            z-index: 4;
+        }
+        .info .uname {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+        }
+        .info .desc {
+            font-size: 14px;
+            line-height: 1.5;
+            opacity: .95;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+            word-break: break-word;
+        }
+        .info .tag {
+            color: #ffd1dc;
+        }
+
+        /* ---------- 进度条（仅视频模式） ---------- */
+        .progress {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 3px;
+            z-index: 6;
+            background: rgba(255, 255, 255, .18);
+            pointer-events: none;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #fe2c55;
+            transition: width .12s linear;
+        }
+        .mode-image .progress {
+            display: none;
+        }
+
+        /* ---------- 底部导航（装饰） ---------- */
+        .navbar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            height: calc(54px + env(safe-area-inset-bottom));
+            padding-bottom: env(safe-area-inset-bottom);
+            display: flex;
+            background: #000;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, .6);
+        }
+        .nav-item.active {
+            color: #fff;
+        }
+        .nav-item svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        /* ---------- 桌面端居中 ---------- */
+        @media (min-width: 600px) {
+            #mode-bar {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 420px;
+                border-radius: 0 0 12px 12px;
+            }
+            #image-control {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 420px;
+                border-radius: 0 0 12px 12px;
+                top: 52px;
+            }
+            #feed {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 420px;
+                height: min(calc(100dvh - 52px), 708px);
+                top: 52px;
+                border-radius: 0;
+                box-shadow: 0 0 80px rgba(0, 0, 0, .6);
+            }
+            #feed.mode-image {
+                top: 92px;
+                height: min(calc(100dvh - 92px), 668px);
+            }
+            .slide {
+                height: min(calc(100dvh - 52px), 708px);
+                width: 420px;
+            }
+            #feed.mode-image .slide {
+                height: min(calc(100dvh - 92px), 668px);
+            }
+            .navbar {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 420px;
+            }
+        }
+
+        /* ---------- 首次进入蒙层 ---------- */
+        #gate {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            cursor: pointer;
+        }
+        #gate .play-tri {
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            background: rgba(254, 44, 85, .9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px rgba(254, 44, 85, .5);
+        }
+        #gate .play-tri::after {
+            content: "";
+            border-left: 28px solid #fff;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid transparent;
+            margin-left: 8px;
+        }
+        #gate p {
+            color: rgba(255, 255, 255, .8);
+            font-size: 14px;
+        }
+        .hidden {
+            display: none !important;
+        }
+
+        /* ---------- 源标识 ---------- */
+        .source-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 5;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, .45);
+            backdrop-filter: blur(6px);
+            font-size: 11px;
+            color: rgba(255, 255, 255, .7);
+            letter-spacing: .3px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 首次点击蒙层 -->
+    <div id="gate">
+        <div class="play-tri"></div>
+        <p>点击进入 · 上下滑动切换</p>
+    </div>
+
+    <!-- 顶部模式切换 -->
+    <div id="mode-bar">
+        <span class="mode-item active" data-mode="video">🎬 视频</span>
+        <span class="mode-item" data-mode="image">🖼️ 图片</span>
+    </div>
+
+    <!-- 图片模式控制条 -->
+    <div id="image-control">
+        <div class="ctrl-group">
+            <span class="ctrl-label">自动轮播</span>
+            <button class="toggle-btn" id="autoToggle">关闭</button>
+        </div>
+        <div class="ctrl-group">
+            <span class="ctrl-label">间隔</span>
+            <input class="delay-input" id="delayInput" type="number" min="1" max="30" value="5" />
+            <span class="delay-unit">秒</span>
+        </div>
+        <div class="status-text" id="statusText">⏸ 暂停</div>
+    </div>
+
+    <div id="feed"></div>
+
+    <!-- 底部导航 -->
+    <nav class="navbar">
+        <div class="nav-item active">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            首页
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+            朋友
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 3v2.21l6 3.34V17h3v2H3v-2h3V8.55l6-3.34V3h0zm2 14v-6h-4v6h4z"/></svg>
+            +
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C9.24 2 7 4.24 7 7c0 2.85 2.92 7.21 5 9.88 2.11-2.69 5-7 5-9.88 0-2.76-2.24-5-5-5zm0 7.5A2.5 2.5 0 1 1 12 4.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            消息
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            我
+        </div>
+    </nav>
+
+    <script>
+        // ================================================================
+        //  随机视频 / 图片 播放器
+        //  视频源：原有3个 + 新增5个（从「刷鸭」提取）
+        //  图片源：Picsum + DWO黑丝 + XXAPI黑丝
+        // ================================================================
+
+        // ---------- DOM 引用 ----------
+        const feed = document.getElementById('feed');
+        const gate = document.getElementById('gate');
+        const modeBar = document.getElementById('mode-bar');
+        const modeItems = modeBar.querySelectorAll('.mode-item');
+        const imageControl = document.getElementById('image-control');
+        const autoToggle = document.getElementById('autoToggle');
+        const delayInput = document.getElementById('delayInput');
+        const statusText = document.getElementById('statusText');
+        const topSpacer = document.createElement('div');
+        feed.appendChild(topSpacer);
+
+        let currentMode = 'video';
+
+        // ---------- 图片自动轮播相关 ----------
+        let imageAutoEnabled = false;
+        let imageAutoTimer = null;
+
+        // ---------- 工具函数 ----------
+        // HTTP → HTTPS 升级，避免混合内容拦截
+        const toSecure = (url) => url.replace(/^http:\/\//i, 'https://');
+        // 防缓存穿透：追加随机参数，保证每次请求新内容
+        const bustCache = (url) => `${url}${url.includes('?') ? '&' : '?'}_r=${Date.now()}${Math.floor(Math.random() * 1000)}`;
+
+        // ---------- 视频源 ----------
+        const VIDEO_SOURCES = [
+            // ===== 原有稳定源 =====
+            {
+                id: 'xzdx',
+                name: '小众独行',
+                url: 'https://api.xzdx.top/xjj',
+                pick: d => d && d.data && d.data.url,
+            },
+            {
+                id: 'dwo',
+                name: '随机小姐姐',
+                url: 'https://openapi.dwo.cc/api/ksvideo?type=json',
+                pick: d => d && d.pic ? d.pic.replace(/^http:\/\//, 'https://') : null,
+            },
+            {
+                id: 'nrzj',
+                name: 'NRZJ视频',
+                getUrl: () => `https://v.nrzj.vip/video.php?_t=${Math.random()}`,
+            },
+            // ===== 新增：从「刷鸭」提取的 5 个稳定源 =====
+            {
+                id: 'yujn_zzxjj',
+                name: '高质量纯妹',
+                getUrl: () => bustCache(toSecure('https://api.yujn.cn/api/zzxjj.php?type=video')),
+            },
+            {
+                id: 'yujn_heisi',
+                name: '黑丝',
+                getUrl: () => bustCache(toSecure('https://api.yujn.cn/api/heisis.php?type=video')),
+            },
+            {
+                id: 'yujn_nvda',
+                name: '萌妹',
+                getUrl: () => bustCache(toSecure('https://api.yujn.cn/api/nvda.php?type=video')),
+            },
+            {
+                id: 'yujn_rewu',
+                name: '热舞',
+                getUrl: () => bustCache(toSecure('https://api.yujn.cn/api/rewu.php?type=video')),
+            },
+            {
+                id: 'cenguigui',
+                name: '小姐姐',
+                getUrl: () => bustCache(toSecure('https://api.cenguigui.cn/api/mp4/MP4_xiaojiejie.php')),
+            },
+         ];
+
+        // ---------- 图片源 ----------
+        const IMAGE_SOURCES = [{
+            id: 'picsum',
+            name: 'Picsum',
+            getUrl: () => {
+                const seed = Math.random().toString(36).substring(2, 10);
+                return `https://picsum.photos/seed/${seed}/400/700`;
+            }
+        }, {
+            id: 'dwo_hs',
+            name: 'DWO黑丝',
+            url: 'https://openapi.dwo.cc/api/hs_img',
+            pick: d => d && d.数据 && d.数据.pic ? d.数据.pic.replace(/^http:\/\//, 'https://') : null,
+        }, {
+            id: 'xxapi_hs',
+            name: 'XXAPI黑丝',
+            getUrl: () => `https://v2.xxapi.cn/api/heisi?return=302&_t=${Math.random()}`,
+        }];
+
+        // ---------- 状态变量 ----------
+        const INITIAL_SLIDES = 5;
+        const KEEP_BEFORE = 2;
+        const KEEP_AFTER = 5;
+        let slots = [];
+        let cursor = -1;
+        let firstIndex = 0;
+        let srcCursor = 0;
+
+        // ---------- 获取下一个内容 ----------
+        async function fetchNext() {
+            const sources = currentMode === 'video' ? VIDEO_SOURCES : IMAGE_SOURCES;
+            for (let t = 0; t < sources.length; t++) {
+                const src = sources[(srcCursor + t) % sources.length];
+                try {
+                    let url = null;
+                    if (src.getUrl) {
+                        url = src.getUrl();
+                    } else {
+                        const r = await fetch(src.url, { cache: 'no-store' });
+                        if (!r.ok) continue;
+                        const data = await r.json();
+                        url = src.pick(data);
+                    }
+                    if (url && url.startsWith('http')) {
+                        srcCursor = (srcCursor + t + 1) % sources.length;
+                        return { ok: true, id: src.id, name: src.name, url };
+                    }
+                } catch (_) { /* 继续尝试下一个 */ }
+            }
+            return { ok: false };
+        }
+
+        // ---------- 构建 slide ----------
+        function makeSlide() {
+            const el = document.createElement('div');
+            el.className = 'slide';
+            const contentHtml = currentMode === 'video' ?
+                `<video class="video-el" playsinline webkit-playsinline preload="auto" x5-playsinline></video>` :
+                `<img class="image-el" alt="随机图片" />`;
+
+            el.innerHTML = `
+            ${contentHtml}
+            <div class="status"><div class="spinner"></div><div>加载中…</div></div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <div class="source-badge hidden">🎬 未知</div>
+            <div class="actions hidden">
+              <div class="act like">
+                <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                <span class="label">赞</span>
+              </div>
+              <div class="act">
+                <div class="icon"><svg viewBox="0 0 24 24"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
+                <span class="label">评论</span>
+              </div>
+              <div class="act">
+                <div class="icon"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg></div>
+                <span class="label">分享</span>
+              </div>
+            </div>
+            <div class="info hidden">
+              <div class="uname"></div>
+              <div class="desc"></div>
+            </div>
+          `;
+            feed.appendChild(el);
+
+            const slot = {
+                el,
+                video: el.querySelector('video'),
+                image: el.querySelector('img'),
+                status: el.querySelector('.status'),
+                progressBar: el.querySelector('.progress-bar'),
+                actions: el.querySelector('.actions'),
+                info: el.querySelector('.info'),
+                badge: el.querySelector('.source-badge'),
+                data: null,
+                loading: null,
+                disposed: false,
+                index: 0,
+                liked: false,
+                active: false,
+            };
+
+            if (currentMode === 'video') {
+                const v = slot.video;
+                v.addEventListener('loadstart', () => { if (slot.active) showStatus(slot, '加载中…'); });
+                v.addEventListener('waiting', () => { if (slot.active) showStatus(slot, '缓冲中…'); });
+                ['canplay', 'playing', 'canplaythrough', 'seeked'].forEach(ev =>
+                    v.addEventListener(ev, () => { if (slot.active) hideStatus(slot); })
+                );
+                v.addEventListener('error', () => {
+                    if (slot.active) {
+                        showError(slot, '视频加载失败，自动换下一个…');
+                        setTimeout(() => {
+                            if (slot.index === cursor) scrollToIndex(cursor + 1);
+                        }, 800);
+                    }
+                });
+                v.addEventListener('timeupdate', () => {
+                    if (v.duration) slot.progressBar.style.width = (v.currentTime / v.duration * 100) + '%';
+                });
+                v.addEventListener('ended', () => {
+                    if (slot.index === cursor) scrollToIndex(cursor + 1);
+                });
+            } else {
+                const img = slot.image;
+                img.addEventListener('load', () => {
+                    if (slot.active) hideStatus(slot);
+                });
+                img.addEventListener('error', () => {
+                    if (slot.active) {
+                        showError(slot, '图片加载失败，自动换下一张…');
+                        setTimeout(() => {
+                            if (slot.index === cursor) scrollToIndex(cursor + 1);
+                        }, 800);
+                    }
+                });
+                slot.progressBar.style.display = 'none';
+            }
+
+            el.querySelector('.like').addEventListener('click', (e) => {
+                e.stopPropagation();
+                slot.liked = !slot.liked;
+                el.querySelector('.like').classList.toggle('liked', slot.liked);
+                el.querySelector('.like .label').textContent = slot.liked ? '已赞' : '赞';
+            });
+
+            return slot;
+        }
+
+        // ---------- 状态显示 ----------
+        function showStatus(slot, msg) {
+            slot.status.classList.remove('hidden');
+            slot.status.innerHTML = `<div class="spinner"></div><div>${msg || '加载中…'}</div>`;
+        }
+        function hideStatus(slot) {
+            slot.status.classList.add('hidden');
+        }
+        function showError(slot, msg) {
+            slot.status.classList.remove('hidden');
+            slot.status.innerHTML = `<div>${msg || '加载失败'}</div>`;
+        }
+
+        // ---------- 加载内容 ----------
+        async function loadInto(slot) {
+            if (!slot || slot.disposed) return;
+            if (slot.data) return;
+            if (slot.loading) return slot.loading;
+
+            slot.loading = (async () => {
+                try {
+                    const result = await fetchNext();
+                    if (slot.disposed) return;
+                    if (!result.ok) {
+                        if (slot.active) showError(slot, '所有源暂不可用，请稍后重试');
+                        return;
+                    }
+                    slot.data = result;
+                    if (currentMode === 'video') {
+                        slot.video.src = result.url;
+                        slot.video.load();
+                    } else {
+                        slot.image.src = result.url;
+                    }
+                    slot.badge.textContent = currentMode === 'video' ? '🎬 ' + result.name : '🖼️ ' + result.name;
+                    slot.badge.classList.remove('hidden');
+                    const name = result.name || (currentMode === 'video' ? '视频' : '图片');
+                    slot.info.querySelector('.uname').textContent = '@' + name;
+                    const tags = currentMode === 'video' ?
+                        ['#美女', '#随机视频', '#刷到就是缘分', '#养眼', '#小姐姐'] :
+                        ['#美图', '#随机图片', '#视觉享受', '#摄影', '#壁纸'];
+                    const tag = tags[Math.floor(Math.random() * tags.length)];
+                    slot.info.querySelector('.desc').innerHTML =
+                        `刷到的就是缘分 <span class="tag">${tag}</span>`;
+                } finally {
+                    slot.loading = null;
+                }
+            })();
+            return slot.loading;
+        }
+
+        // ---------- 槽位管理 ----------
+        function getSlot(idx) {
+            return slots.find(s => s.index === idx);
+        }
+
+        function releaseSlot(slot) {
+            slot.active = false;
+            slot.disposed = true;
+            if (slot.video) {
+                slot.video.pause();
+                slot.video.removeAttribute('src');
+                slot.video.load();
+            }
+            if (slot.image) {
+                slot.image.removeAttribute('src');
+            }
+            slot.el.remove();
+        }
+
+        function setFeedOffset() {
+            topSpacer.style.height = (firstIndex * feed.clientHeight) + 'px';
+        }
+
+        // ---------- 激活 ----------
+        function activate(idx) {
+            if (idx < 0) return;
+            ensurePool(idx);
+            if (idx === cursor) return;
+
+            slots.forEach((s) => {
+                s.active = false;
+                if (s.video) s.video.pause();
+            });
+
+            cursor = idx;
+            const slot = getSlot(idx);
+            if (!slot) return;
+            slot.active = true;
+            slot.info.classList.remove('hidden');
+            slot.actions.classList.remove('hidden');
+
+            if (currentMode === 'video') {
+                const v = slot.video;
+                const tryPlay = () => {
+                    v.play().catch(() => {
+                        if (slot.active) showError(slot, '点击重试播放');
+                    });
+                };
+                if (v.readyState >= 3) {
+                    hideStatus(slot);
+                    tryPlay();
+                } else {
+                    showStatus(slot, '加载中…');
+                    if (v.src) tryPlay();
+                }
+            } else {
+                const img = slot.image;
+                if (img.complete && img.naturalWidth > 0) {
+                    hideStatus(slot);
+                } else {
+                    showStatus(slot, '加载中…');
+                }
+            }
+            ensurePool();
+
+            if (currentMode === 'image' && imageAutoEnabled) {
+                resetImageTimer();
+            }
+        }
+
+        // ---------- 维护窗口 ----------
+        function ensurePool(center = cursor) {
+            if (center < 0) center = 0;
+            const from = Math.max(0, center - KEEP_BEFORE);
+            const to = Math.max(INITIAL_SLIDES - 1, center + KEEP_AFTER);
+
+            for (let i = from; i <= to; i++) {
+                if (getSlot(i)) continue;
+                const s = makeSlide();
+                s.index = i;
+                slots.push(s);
+                loadInto(s);
+            }
+
+            slots
+                .filter(s => s.index < from || s.index > to)
+                .forEach(releaseSlot);
+
+            slots = slots
+                .filter(s => s.index >= from && s.index <= to)
+                .sort((a, b) => a.index - b.index);
+
+            slots.forEach(s => feed.appendChild(s.el));
+            firstIndex = slots[0] ? slots[0].index : 0;
+            setFeedOffset();
+        }
+
+        function scrollToIndex(idx) {
+            if (idx < 0) return;
+            ensurePool(idx);
+            feed.scrollTo({ top: idx * feed.clientHeight, behavior: 'smooth' });
+        }
+
+        // ---------- 图片自动轮播 ----------
+        function startImageTimer() {
+            stopImageTimer();
+            if (!imageAutoEnabled || currentMode !== 'image') return;
+            const delay = Math.max(1, parseInt(delayInput.value) || 5) * 1000;
+            imageAutoTimer = setTimeout(() => {
+                if (currentMode === 'image' && imageAutoEnabled) {
+                    const next = cursor + 1;
+                    ensurePool(next);
+                    scrollToIndex(next);
+                }
+            }, delay);
+            statusText.textContent = '⏳ ' + (delay / 1000) + 's';
+        }
+
+        function stopImageTimer() {
+            if (imageAutoTimer) {
+                clearTimeout(imageAutoTimer);
+                imageAutoTimer = null;
+            }
+            statusText.textContent = '⏸ 暂停';
+        }
+
+        function resetImageTimer() {
+            if (currentMode === 'image' && imageAutoEnabled) {
+                startImageTimer();
+            } else {
+                stopImageTimer();
+            }
+        }
+
+        function toggleAuto() {
+            imageAutoEnabled = !imageAutoEnabled;
+            autoToggle.textContent = imageAutoEnabled ? '开启' : '关闭';
+            autoToggle.classList.toggle('active', imageAutoEnabled);
+            if (imageAutoEnabled && currentMode === 'image') {
+                startImageTimer();
+            } else {
+                stopImageTimer();
+            }
+        }
+
+        function updateDelay() {
+            let val = parseInt(delayInput.value);
+            if (isNaN(val) || val < 1) val = 1;
+            if (val > 30) val = 30;
+            delayInput.value = val;
+            if (imageAutoEnabled && currentMode === 'image') {
+                startImageTimer();
+            }
+        }
+
+        // ---------- 滚动检测 ----------
+        let snapTimer;
+        feed.addEventListener('scroll', () => {
+            clearTimeout(snapTimer);
+            snapTimer = setTimeout(() => {
+                const idx = Math.round(feed.scrollTop / feed.clientHeight);
+                activate(idx);
+            }, 90);
+        }, { passive: true });
+
+        window.addEventListener('resize', () => {
+            setFeedOffset();
+            if (cursor >= 0) feed.scrollTo({ top: cursor * feed.clientHeight });
+        }, { passive: true });
+
+        // ---------- 键盘 ----------
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'j') {
+                e.preventDefault();
+                scrollToIndex(cursor + 1);
+            } else if (e.key === 'ArrowUp' || e.key === 'k') {
+                e.preventDefault();
+                if (cursor > 0) scrollToIndex(cursor - 1);
+            } else if (e.key === ' ') {
+                e.preventDefault();
+                const slot = getSlot(cursor);
+                if (!slot) return;
+                if (currentMode === 'video') {
+                    const v = slot.video;
+                    if (v.paused) v.play();
+                    else v.pause();
+                }
+            }
+        });
+
+        // ---------- 切换模式 ----------
+        function switchMode(mode) {
+            if (mode === currentMode) return;
+            currentMode = mode;
+            modeItems.forEach(item => {
+                item.classList.toggle('active', item.dataset.mode === mode);
+            });
+
+            if (mode === 'image') {
+                imageControl.style.display = 'flex';
+                feed.classList.add('mode-image');
+                if (imageAutoEnabled) {
+                    startImageTimer();
+                }
+            } else {
+                imageControl.style.display = 'none';
+                feed.classList.remove('mode-image');
+                stopImageTimer();
+            }
+
+            slots.forEach(s => releaseSlot(s));
+            slots = [];
+            cursor = -1;
+            firstIndex = 0;
+            srcCursor = 0;
+            while (feed.children.length > 1) {
+                feed.removeChild(feed.lastChild);
+            }
+            ensurePool(0);
+            const firstSlot = getSlot(0);
+            if (firstSlot) {
+                loadInto(firstSlot).then(() => {
+                    activate(0);
+                });
+            }
+        }
+
+        modeItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const mode = item.dataset.mode;
+                switchMode(mode);
+            });
+        });
+
+        autoToggle.addEventListener('click', toggleAuto);
+        delayInput.addEventListener('change', updateDelay);
+        delayInput.addEventListener('input', updateDelay);
+
+        // ---------- 启动 ----------
+        async function boot() {
+            currentMode = 'video';
+            modeItems.forEach(item => {
+                item.classList.toggle('active', item.dataset.mode === 'video');
+            });
+            imageControl.style.display = 'none';
+            feed.classList.remove('mode-image');
+            ensurePool(0);
+            const firstSlot = getSlot(0);
+            if (firstSlot) {
+                await loadInto(firstSlot);
+                activate(0);
+            }
+        }
+
+        gate.addEventListener('click', () => {
+            gate.classList.add('hidden');
+            boot();
+        });
+
+        document.addEventListener('keydown', () => {
+            if (!gate.classList.contains('hidden')) {
+                gate.classList.add('hidden');
+                boot();
+            }
+        }, { once: true });
+
+        if (gate.classList.contains('hidden')) {
+            boot();
+        }
+    </script>
+</body>
+</html>
